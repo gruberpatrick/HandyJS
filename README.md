@@ -2,7 +2,6 @@
 
 ## FILE OPERATIONS
 
-```
 **Networking.fileRequest(** sLocation, fCallback = *function(){}*, sMethod = *"GET"*, oParams = *{}*, oHeaders = *{}*, lPort = *80* **)**
 
 **@param** sLocation : Triggers for http, https and local files ("http://", "https://", "file://").
@@ -11,10 +10,8 @@
 **@param** oParams   : Object of POST parameters.
 **@param** oHeaders  : Set header settings for request.
 **@param** lPort     : Set the port for the request. If https is used, the port is automatically set to 443.
-```
 
 **EXAMPLE**
-
 ```
 var sContent = "";
 Networking.fileRequest("https://localhost/tests/requests.php?test=A", function(sData, lStatus){
