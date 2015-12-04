@@ -4,11 +4,11 @@
 
 **Networking.fileRequest(** sLocation, fCallback = *function(){}*, sMethod = *"GET"*, oParams = *{}*, oHeaders = *{}*, lPort = *80* **)**
 
-**@param** sLocation : Triggers for http, https and local files ("http://", "https://", "file://").
-**@param** fCallback : Callback function for response.
-**@param** sMethod   : GET or POST request.
-**@param** oParams   : Object of POST parameters.
-**@param** oHeaders  : Set header settings for request.
+**@param** sLocation : Triggers for http, https and local files ("http://", "https://", "file://").<br />
+**@param** fCallback : Callback function for response.<br />
+**@param** sMethod   : GET or POST request.<br />
+**@param** oParams   : Object of POST parameters.<br />
+**@param** oHeaders  : Set header settings for request.<br />
 **@param** lPort     : Set the port for the request. If https is used, the port is automatically set to 443.
 
 **EXAMPLE**
@@ -24,8 +24,8 @@ Networking.fileRequest("https://localhost/tests/requests.php?test=A", function(s
 
 **Networking.fileWrite(** sLocation, sContent, bAppend = *false* **)**
 
-**@param** sLocation : Set local file to write data to.
-**@param** sContent  : Data to be written to file.
+**@param** sLocation : Set local file to write data to.<br />
+**@param** sContent  : Data to be written to file.<br />
 **@param** sMethod   : Append = true; Overwrite = false.
 
 **EXAMPLE**
@@ -39,9 +39,9 @@ Networking.fileWrite("./testfile", "Write this to a file.", true);
 
 **Networking.initializeWebSocket(** lPort, fConnectionCallback, fMessageCallback, fErrorCallback **)**
 
-**@param** lPort                : Port to open.
-**@param** fConnectionCallback  : Callback for opened connection.
-**@param** fMessageCallback     : Callback for message received.
+**@param** lPort                : Port to open.<br />
+**@param** fConnectionCallback  : Callback for opened connection.<br />
+**@param** fMessageCallback     : Callback for message received.<br />
 **@param** fErrorCallback       : Callback for error handling.
 
 **Networking.clientBroadcast(** sData **)**
@@ -50,7 +50,7 @@ Networking.fileWrite("./testfile", "Write this to a file.", true);
 
 **Networking.clientSend(** client, sData **)**
 
-**@param** client : Client eighter as object or the key as string.
+**@param** client : Client eighter as object or the key as string.<br />
 **@param** sData  : Data to send to all clients. If object, data is transformed to string.
 
 **EXAMPLE**
@@ -69,10 +69,10 @@ Networking.oSocket.initializeWebSocket(3333, function(oWS){
 
 **Networking.connectWebSocket(** sHost, lPort, fConnectionCallback, fMessageCallback, fErrorCallback **)**
 
-**@param** sHost                : Host to connect to.
-**@param** lPort                : Port to connect to.
-**@param** fConnectionCallback  : Callback for opened connection.
-**@param** fMessageCallback     : Callback for message received.
+**@param** sHost                : Host to connect to.<br />
+**@param** lPort                : Port to connect to.<br />
+**@param** fConnectionCallback  : Callback for opened connection.<br />
+**@param** fMessageCallback     : Callback for message received.<br />
 **@param** fErrorCallback       : Callback for error handling.
 
 **Networking.serverSend(** sData **)**
