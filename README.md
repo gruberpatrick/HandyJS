@@ -37,28 +37,23 @@ Networking.fileWrite("./testfile", "Write this to a file.", true);
 
 ### SERVER:
 
-**Networking.initializeWebSocket(lPort, fConnectionCallback, fMessageCallback, fErrorCallback)**
+**Networking.initializeWebSocket(** lPort, fConnectionCallback, fMessageCallback, fErrorCallback **)**
 
 **@param** lPort                : Port to open.
-
 **@param** fConnectionCallback  : Callback for opened connection.
-
 **@param** fMessageCallback     : Callback for message received.
-
 **@param** fErrorCallback       : Callback for error handling.
 
-**Networking.clientBroadcast(sData)**
+**Networking.clientBroadcast(** sData **)**
 
 **@param** sData : Data to send to all clients. If object, data is transformed to string.
 
-**Networking.clientSend(client, sData)**
+**Networking.clientSend(** client, sData **)**
 
 **@param** client : Client eighter as object or the key as string.
-
 **@param** sData  : Data to send to all clients. If object, data is transformed to string.
 
 **EXAMPLE**
-
 ```
 Networking.oSocket.initializeWebSocket(3333, function(oWS){
   console.log("SERVER: Connection opened.");
@@ -70,26 +65,21 @@ Networking.oSocket.initializeWebSocket(3333, function(oWS){
 });
 ```
 
-**CLIENT:**
+### CLIENT:
 
-**Networking.connectWebSocket(sHost, lPort, fConnectionCallback, fMessageCallback, fErrorCallback)**
+**Networking.connectWebSocket(** sHost, lPort, fConnectionCallback, fMessageCallback, fErrorCallback **)**
 
 **@param** sHost                : Host to connect to.
-
 **@param** lPort                : Port to connect to.
-
 **@param** fConnectionCallback  : Callback for opened connection.
-
 **@param** fMessageCallback     : Callback for message received.
-
 **@param** fErrorCallback       : Callback for error handling.
 
-**Networking.serverSend(sData)**
+**Networking.serverSend(** sData **)**
 
 **@param** sData : Data to send to server. If object, data is transformed to string.
 
 **EXAMPLE**
-
 ```
 Networking.oSocket.connectWebSocket("localhost", 3333, function(oWS){
   console.log("CLIENT: connection opened");
@@ -98,5 +88,5 @@ Networking.oSocket.connectWebSocket("localhost", 3333, function(oWS){
   console.log("SERVER: " + oServer["sLastMessage"]);
 }, function(e){
   console.log(e);
-});s
+});
 ```
