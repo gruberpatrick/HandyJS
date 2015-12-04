@@ -2,19 +2,16 @@
 
 ## FILE OPERATIONS
 
-**Networking.fileRequest(sLocation, fCallback = function(){}, sMethod = "GET", oParams = {}, oHeaders = {}, lPort = 80)**
+```
+**Networking.fileRequest(** sLocation, fCallback = *function(){}*, sMethod = *"GET"*, oParams = *{}*, oHeaders = *{}*, lPort = *80* **)**
 
 **@param** sLocation : Triggers for http, https and local files ("http://", "https://", "file://").
-
 **@param** fCallback : Callback function for response.
-
 **@param** sMethod   : GET or POST request.
-
 **@param** oParams   : Object of POST parameters.
-
 **@param** oHeaders  : Set header settings for request.
-
 **@param** lPort     : Set the port for the request. If https is used, the port is automatically set to 443.
+```
 
 **EXAMPLE**
 
@@ -28,16 +25,13 @@ Networking.fileRequest("https://localhost/tests/requests.php?test=A", function(s
 }, "POST", {"test":"B"}, {}, 443);
 ```
 
-**Networking.fileWrite(sLocation, sContent, bAppend = false)**
+**Networking.fileWrite(** sLocation, sContent, bAppend = *false* **)**
 
 **@param** sLocation : Set local file to write data to.
-
 **@param** sContent  : Data to be written to file.
-
 **@param** sMethod   : Append = true; Overwrite = false.
 
 **EXAMPLE**
-
 ```
 Networking.fileWrite("./testfile", "Write this to a file.", true);
 ```
