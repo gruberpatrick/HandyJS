@@ -50,8 +50,13 @@ Networking.fileWrite("./testfile", "Write this to a file.", true);
 
 **Networking.clientSend(** client, sData **)**
 
-**@param** client : Client eighter as object or the key as string.<br />
+**@param** client : Client either as object or the key as string.<br />
 **@param** sData  : Data to send to all clients. If object, data is transformed to string.
+
+**Networking.clientData(** client, oData **)**
+
+**@param** sKey   : Client key as string.<br />
+**@param** oData  : Data to send to client object session.
 
 **EXAMPLE**
 ```
